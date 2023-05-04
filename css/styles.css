@@ -1,5 +1,9 @@
 :root {
   --transition-func: cubic-bezier(0.4, 0, 0.2, 1);
+  --gold-color: #cdac58;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --font: 'Dancing Script', cursive;
 }
 
 html {
@@ -21,7 +25,11 @@ h5,
 h6 {
   margin: 0;
 }
-
+h1,
+h2,
+h3 {
+  font-family: var(--font);
+}
 ul {
   padding: 0;
   margin: 0;
@@ -45,10 +53,8 @@ img {
 
 body {
   position: relative;
-  /* font-family: 'Dancing Script', cursive; */
   font-family: 'Roboto', sans-serif;
   font-style: normal;
-  background-color: #fbfbfb;
   letter-spacing: 0.02em;
   font-size: 22px;
 }
@@ -78,7 +84,7 @@ body {
   gap: 95px;
 }
 .logo {
-  color: #fff;
+  color: var(--white-color);
 }
 .nav-list {
   display: flex;
@@ -93,7 +99,7 @@ body {
   font-size: 22px;
   line-height: 1.14;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--white-color);
 }
 .nav-list .link {
   padding-top: 38px;
@@ -114,16 +120,16 @@ body {
 /*--------------HERO-section--------------*/
 .hero {
   max-width: 375px;
-  background-color: #000;
+  background-color: var(--black-color);
   background-image: linear-gradient(
       rgba(64, 64, 64, 0.7),
       rgba(64, 64, 64, 0.7)
     ),
-    url(../images/hero-bg.jpeg); /*background: linear-gradient(180deg, #5e5e5e 0%, #5e5e5e 100%)*/
+    url(../images/hero-bg.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 331px;
+  padding-top: 250px;
   padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
@@ -136,7 +142,7 @@ body {
   margin-right: auto;
   width: 520px;
   height: 508px;
-  filter: drop-shadow(0px 4px 19px #000000);
+  filter: drop-shadow(0px 4px 19px var(--black-color));
 }
 .hero-thumb.hero-img {
   max-width: 400px;
@@ -152,5 +158,59 @@ body {
   font-family: inherit;
   border: none;
   border-radius: 14px;
-  background: #cdac58;
+  background: var(--gold-color);
+
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 1.37;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--black-color);
+}
+/*-----------About-Us-----------*/
+.aboutus {
+  padding-top: 143px;
+  padding-bottom: 147px;
+  background-color: var(--black-color);
+}
+.aboutus-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.aboutus-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 95px;
+  align-items: center;
+  justify-content: center;
+}
+.aboutus-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 62px;
+  line-height: 1.35;
+  text-align: center;
+  color: var(--gold-color);
+}
+.aboutus-text {
+  width: 669px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.18;
+  text-align: justify;
+  color: var(--white-color);
+}
+.aboutus-list {
+  display: flex;
+  width: 714px;
+  flex-wrap: wrap;
+  row-gap: 19px;
+  column-gap: 18px;
+}
+.aboutus-photos {
+  border-radius: 10px;
 }
